@@ -89,7 +89,7 @@
 
         <v-card-actions>
           <v-spacer></v-spacer>
-          <v-btn color="primary" depressed large class="calcbutton" @click="dialog = false">I accept</v-btn>
+          <v-btn color="primary" depressed large class="calcbutton" @click="dialog = false">OK</v-btn>
         </v-card-actions>
       </v-card>
     </v-dialog>
@@ -105,12 +105,26 @@ export default class Calculator extends Vue {
   @Prop({ default: "" })
   public value!: number | string;
 
+  public input = {
+    current: "",
+    operator: "",
+    prev: "",
+  };
+
   public get displayResult(): string {
     return "result";
   }
 
   public get displayFormula(): string {
     return "formula";
+  }
+
+  public InputKey(key: string): void {
+    const isNumber = /^\d$/.test(key);
+    if (isNumber) {
+      // tslint:disable-next-line:whitespace
+      this.input.current += key;
+    }
   }
 }
 </script>
