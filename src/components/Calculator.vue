@@ -155,7 +155,7 @@ export default class Calculator extends Vue {
         this.input.current = this.input.current.substring(
           0,
           this.input.current.length - 1,
-        );
+        ) || "0";
         return;
       case "c":
         this.input.current = "0";
