@@ -8,7 +8,10 @@
       <v-card class="grey lighten-3">
         <v-card-text style="text-align: right;">
           <div class="subheading" style="min-height:24px;">{{displayFormula}}</div>
-          <div class="display-1" style="min-height:48px;">{{displayResult}}</div>
+          <div
+            :class="[displayResult.length > 15 ? displayResult.length > 20 ? 'headline':'display-1':'display-2']"
+            style="min-height:48px;"
+          >{{displayResult}}</div>
         </v-card-text>
         <v-card-text class="pa-0">
           <v-container grid-list-xs pa-1>
@@ -152,10 +155,8 @@ export default class Calculator extends Vue {
         }
         return;
       case "back":
-        this.input.current = this.input.current.substring(
-          0,
-          this.input.current.length - 1,
-        ) || "0";
+        this.input.current =
+          this.input.current.substring(0, this.input.current.length - 1) || "0";
         return;
       case "c":
         this.input.current = "0";
