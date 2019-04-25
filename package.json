@@ -1,10 +1,23 @@
 {
   "name": "vuetify-calculator",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.3.1",
+  "description": "Calculator component for Vuetify",
+  "author": "XeO3 <xeo3@xeo3.net>",
+  "main": "dist/vuetify-calculator.common.js",
+  "unpkg": "dist/vuetify-calculator.umd.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/XeO3/vuetify-calculator.git"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "build-lib": "vue-cli-service build --target lib --name vuetify-calculator src/components/index.ts",
     "lint": "vue-cli-service lint",
     "test:e2e": "vue-cli-service test:e2e",
     "test:unit": "vue-cli-service test:unit"

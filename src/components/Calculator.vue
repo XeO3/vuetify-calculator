@@ -2,7 +2,7 @@
   <div class="text-xs-center">
     <v-dialog v-model="dialog" width="400">
       <template v-slot:activator="{ on }">
-        <v-btn color="red lighten-2" dark v-on="on">Click Me</v-btn>
+        <v-btn flat icon v-on="on"><v-icon>grid_on</v-icon></v-btn>
       </template>
 
       <v-card class="grey lighten-3">
@@ -18,7 +18,7 @@
             <v-layout row wrap pa0>
               <v-flex v-for="button in buttons" :key="button.key" xs3>
                 <v-btn
-                  :class="['calcbutton', button.class]"
+                  :class="['ma-0', 'calcbutton', button.class]"
                   :color="button.color"
                   @click="InputKey(button.key)"
                   block
@@ -202,9 +202,7 @@ export default class Calculator extends Vue {
 </script>
 
 <style scoped>
-.calcbutton {
-  margin: 0;
-}
+
 </style>
 
 
