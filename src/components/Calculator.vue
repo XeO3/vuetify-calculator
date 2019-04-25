@@ -2,7 +2,13 @@
   <div class="text-xs-center">
     <v-dialog v-model="dialog" width="400">
       <template v-slot:activator="{ on }">
-        <v-btn flat icon v-on="on"><v-icon>grid_on</v-icon></v-btn>
+        <div v-on.capture="on">
+          <slot>
+            <v-btn>
+              Calculator
+            </v-btn>
+          </slot>
+        </div>
       </template>
 
       <v-card class="grey lighten-3">
@@ -53,7 +59,7 @@ interface ICalculatorInput {
 
 @Component
 export default class Calculator extends Vue {
-  public dialog: boolean = true;
+  public dialog: boolean = false;
   @Prop({ default: "" })
   public value!: number | string;
 
@@ -202,7 +208,6 @@ export default class Calculator extends Vue {
 </script>
 
 <style scoped>
-
 </style>
 
 

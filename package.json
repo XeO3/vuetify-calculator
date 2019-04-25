@@ -1,6 +1,6 @@
 {
   "name": "vuetify-calculator",
-  "version": "0.3.1",
+  "version": "0.3.6",
   "description": "Calculator component for Vuetify",
   "author": "XeO3 <xeo3@xeo3.net>",
   "main": "dist/vuetify-calculator.common.js",
@@ -20,21 +20,22 @@
     "build-lib": "vue-cli-service build --target lib --name vuetify-calculator src/components/index.ts",
     "lint": "vue-cli-service lint",
     "test:e2e": "vue-cli-service test:e2e",
-    "test:unit": "vue-cli-service test:unit"
+    "test:unit": "vue-cli-service test:unit",
+    "publish:npm": "npm publish --access public"
   },
   "dependencies": {
     "core-js": "^2.6.5",
     "material-design-icons-iconfont": "^3.0.3",
-    "register-service-worker": "^1.6.2",
-    "roboto-fontface": "*",
     "vue": "^2.6.6",
     "vue-class-component": "^6.0.0",
     "vue-property-decorator": "^8.0.0",
-    "vue-router": "^3.0.1",
-    "vuetify": "^1.5.5",
-    "vuex": "^3.0.1"
+    "vuetify": "^1.5.5"
   },
   "devDependencies": {
+    "roboto-fontface": "*",
+    "register-service-worker": "^1.6.2",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1",
     "@types/chai": "^4.1.0",
     "@types/mocha": "^5.2.4",
     "@vue/cli-plugin-babel": "^3.5.0",

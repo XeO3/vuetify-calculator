@@ -10,6 +10,9 @@
 
     <v-content>
       <Calculator/>
+      <Calculator>
+        <v-btn>OK</v-btn>
+      </Calculator>
     </v-content>
   </v-app>
 </template>

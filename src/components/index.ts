@@ -1,12 +1,15 @@
-import Vue from "vue";
 import VuetifyCalculator from "./Calculator.vue";
 
-const Components: { [key: string]: any } = {
-  VuetifyCalculator,
+const VuetifyCalculatorPlugin = {
+  install(Vue: any) {
+    Vue.component("v-calc", VuetifyCalculator);
+  },
 };
 
-Object.keys(Comment).forEach((name) => {
-  Vue.component(name, Components[name]);
-});
+// Install by default if using the script tag
+if (typeof window !== "undefined" && (window as any).Vue) {
+  (window as any).Vue.use(VuetifyCalculatorPlugin);
+}
 
-export default Comment;
+export default VuetifyCalculatorPlugin;
+export { VuetifyCalculator };
