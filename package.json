@@ -32,10 +32,6 @@
     "vuetify": "^1.5.5"
   },
   "devDependencies": {
-    "roboto-fontface": "*",
-    "register-service-worker": "^1.6.2",
-    "vue-router": "^3.0.1",
-    "vuex": "^3.0.1",
     "@types/chai": "^4.1.0",
     "@types/mocha": "^5.2.4",
     "@vue/cli-plugin-babel": "^3.5.0",
@@ -47,9 +43,13 @@
     "@vue/test-utils": "1.0.0-beta.29",
     "chai": "^4.1.2",
     "lint-staged": "^8.1.0",
+    "register-service-worker": "^1.6.2",
+    "roboto-fontface": "*",
     "typescript": "^3.2.1",
     "vue-cli-plugin-vuetify": "^0.5.0",
-    "vue-template-compiler": "^2.5.21"
+    "vue-router": "^3.0.1",
+    "vue-template-compiler": "^2.5.21",
+    "vuex": "^3.0.1"
   },
   "prettier": {
     "trailingComma": "es5",
